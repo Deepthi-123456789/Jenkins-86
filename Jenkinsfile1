@@ -44,7 +44,7 @@ pipeline{
 post{
     always{
         echo "I will alwyas say hello again"
-        cleanws()  # ifpipiline is success or failure jenkins clean workspace
+        #cleanws()  # ifpipiline is success or failure jenkins clean workspace
     }
     success{
         echo "will run if pipeline is success"
