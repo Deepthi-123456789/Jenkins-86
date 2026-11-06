@@ -40,8 +40,7 @@ pipeline{
             }
         }
     }
-}
-post{
+    post{
     always{
         echo "I will alwyas say hello again"
     }
@@ -51,4 +50,5 @@ post{
     failure{
         echo "will run if pipeline is failure"
     }
+}
 }
