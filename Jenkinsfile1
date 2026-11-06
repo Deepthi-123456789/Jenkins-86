@@ -43,6 +43,7 @@ pipeline{
     post{
     always{
         echo "I will alwyas say hello again"
+        cleanws()
     }
     success{
         echo "will run if pipeline is success"
