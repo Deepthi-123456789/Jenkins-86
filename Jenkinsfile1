@@ -1,0 +1,55 @@
+// Hybrid approceh both scripted and declartive
+pipeline{
+    agent{
+        node{
+            label 'agent1'
+        }
+        
+    }
+    stages{
+        stage('build'){
+            steps{
+                script{
+                    sh """ 
+                    echo "build"
+                    """
+                }
+                
+            }
+        }
+        stage('test'){
+            steps{
+                script{
+                    sh"""
+                    echo "test"
+                    """
+                }
+
+            }
+            
+        }
+        stage('deploy'){
+            steps{
+                script{
+                    sh"""
+                    echo "deploy" 
+                    """
+
+                }
+        
+            }
+        }
+    }
+}
+post{
+    always{
+        echo "I will alwyas say hello again"
+        cleanws()  # ifpipiline is success or failure jenkins clean workspace
+    }
+    success{
+        echo "will run if pipeline is success"
+    }
+    failure{
+        echo "will run if pipeline is failure"
+    }
+}
