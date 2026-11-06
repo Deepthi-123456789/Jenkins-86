@@ -10,7 +10,7 @@ pipeline{
             course = "jenkins"    // to pass the environment varailbles
     }
     options{
-        timeout(time: 10, unit: 'seconds') // if pipeline is running more than 1 hour it will be aborted
+        timeout(time: 20, unit: 'MINUTES') // if pipeline is running more than 1 hour it will be aborted
     }
     parameters {
         string(name: 'PERSON', defaultValue: 'Mr Jenkins', description: 'Who should I say hello to?')
