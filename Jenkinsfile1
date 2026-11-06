@@ -7,7 +7,7 @@ pipeline{
         
     }
     environment{
-            course = "jenkins"    // to pass the environment varailbles
+            course = "jenkins1"    // to pass the environment varailbles
     }
     options{
         timeout(time: 20, unit: 'MINUTES') // if pipeline is running more than 1 hour it will be aborted
